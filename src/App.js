@@ -19,10 +19,10 @@ class App extends Component {
             <Routes>
               <Route exact path="/" element={<Accueil />} />
               <Route path="/about" element={<Carousel />} />
-              <Route path="/contact" element={<Tableau />} />
-              <Route path="/contact" element={<Calendrier />} />
-              <Route path="/contact" element={<Convertisseur />} />
-              <Route path="/contact" element={<Crypto />} />
+              <Route path="/tableau" element={<Tableau />} />
+              <Route path="/calendrier" element={<Calendrier />} />
+              <Route path="/convertisseur" element={<Convertisseur />} />
+              <Route path="/crypto" element={<Crypto />} />
             </Routes>
           </div>
         </BrowserRouter>
