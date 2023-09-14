@@ -35,6 +35,15 @@ code {
   color: #222;
 }
 
+.head{
+  background-color: #2565AE;
+  color: white;
+  text-align: center;
+}
+fieldset{
+  border: 0;
+}
+
 img {
-  height: 600px;
+  height: 700px;
 }

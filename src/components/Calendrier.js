@@ -1,13 +1,23 @@
-import React, {Component} from 'react';
+import FullCalendar from '@fullcalendar/react' // must go before plugins
+import dayGridPlugin from '@fullcalendar/daygrid' // a plugin!
 
-class Calendrier extends Component {
-    render() {
+
+
+function DemoApp () {
         return (
             <div>
-                
+                <h1 className='MyCalendar' style={{ textAlign: "left" }}>Calendrier</h1>
+                <FullCalendar
+                    plugins={[dayGridPlugin]}
+                    initialView="dayGridMonth"
+                    weekends={true}
+                    events={[
+                      { title: 'Début TP1', date: '2023-09-12' },
+                      { title: 'Remise tp1', date: '2023-09-26' }
+                    ]}
+                />
             </div>
-        );
-    }
+        )
+    
 }
-
-export default Calendrier;
+export default DemoApp;
