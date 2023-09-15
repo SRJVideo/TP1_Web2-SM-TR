@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Table} from "react-bootstrap";
+import Junior from "./sous-components/TableauJunior"
 
 function Tableau () {
 
@@ -15,11 +16,7 @@ function Tableau () {
                        </tr>
                    </thead>
                     <tbody>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td> $</td>
-                        </tr>
+                       <Junior modele="Playstation 5" marque="Sony" prix={500}/>
                     </tbody>
                 </Table>
             </div>
