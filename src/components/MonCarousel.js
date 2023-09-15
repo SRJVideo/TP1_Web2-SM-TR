@@ -13,39 +13,44 @@ function MonCarousel() {
       <h1 style={{ textAlign: "left" }}>Carousel</h1>
       <Carousel>
         <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src={Monimage1}
-            alt="First slide"
-          />
+        <Monimage1 text="First slide" />
+        <Carousel.Caption>
+          <h3>First slide label</h3>
+          <p>Messi gagne la coupe du monde.</p>
+        </Carousel.Caption>
+         
         </Carousel.Item>
         <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src={Monimage2}
-            alt="Second slide"
-          />
+
+        <Monimage2 text="Second  slide" />
+        <Carousel.Caption>
+          <h3>Second slide label</h3>
+          <p>Maradona gagne la coupe du monde.</p>
+        </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src={Monimage3}
-            alt="Third slide"
-          />
+
+        <Monimage3 text="Third  slide" />
+        <Carousel.Caption>
+          <h3>Third slide label</h3>
+          <p>Pele gagne la coupe du monde.</p>
+        </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src={Monimage4}
-            alt="Fourth slide"
-          />
+
+        <Monimage4 text="Fourth  slide" />
+        <Carousel.Caption>
+          <h3>Fourth slide label</h3>
+          <p>Ronaldo gagne la coupe du monde.</p>
+        </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src={Monimage5}
-            alt="Fifth slide"
-          />
+
+        <Monimage5 text="Fifth slide" />
+        <Carousel.Caption>
+          <h3>Fifth slide label</h3>
+          <p>Zidane gagne la coupe du monde.</p>
+        </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
     </div>

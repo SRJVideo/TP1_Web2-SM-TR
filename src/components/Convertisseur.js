@@ -37,15 +37,15 @@ class Convertisseur extends Component {
             <div>
                 <h1 style={{ textAlign: "left" }}>Convertisseur d'une unité de mesure</h1>
                 <fieldset>
-                    <legend>Saisissez la mesure en Centimètre :</legend>
+                    <legend>Saisissez la mesure en Centimètres :</legend>
                     <input type='text' onChange={this.handleValeur_centimetreChange} value={this.state.valeur_centimetre} />
                 </fieldset>
                 <fieldset>
-                    <legend>Saisissez la mesure en Mètre :</legend>
+                    <legend>Saisissez la mesure en Mètres :</legend>
                     <input type='text' onChange={this.handleValeur_metreChange} value={this.state.valeur_metre}/>
                 </fieldset>
                 <fieldset>
-                    <legend>Saisissez la mesure en Kilomètre :</legend>
+                    <legend>Saisissez la mesure en Kilomètres :</legend>
                     <input type='text' onChange={this.handleValeur_kilometreChange} value={this.state.valeur_kilometre} />
                 </fieldset>
             </div>
