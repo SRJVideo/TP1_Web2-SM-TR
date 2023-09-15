@@ -1,9 +1,7 @@
-import React, {Component} from 'react';
-
 function TableauJunior (props) {
     const modele = props.modele;
     const marque = props.marque;
-    const prix = Number(props.prix);
+    const prix = props.prix;
 
     return (
         <div>
