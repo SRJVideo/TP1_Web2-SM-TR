@@ -1,8 +1,10 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {Table} from "react-bootstrap";
 import Junior from "./sous-components/TableauJunior"
+
 // site déployé : https://tp1-web2-sm-tr.vercel.app/
-class Tableau extends Component {
+// https://www.syncfusion.com/forums/166256/custom-number-separators-thousand-and-decimal
+class Tableau extends React.Component {
 
     state = {
         listElements : [
@@ -18,7 +20,7 @@ class Tableau extends Component {
         return (
             <div>
                 <h1>Tableau d'évènements</h1>
-                <Table striped bordered hover>
+                <Table striped bordered hover size="sm">
                     <thead>
                     <tr>
                         <th>Modele</th>
@@ -30,7 +32,7 @@ class Tableau extends Component {
                     {this.state.listElements.map((elem, index) => {
                        return(
                            <div key={index}>
-                               <Junior modele={elem.modele} marque={elem.marque} prix={ new Intl.NumberFormat('fr-FR').format(elem.prix)  }/>
+                               <Junior modele={elem.modele} marque={elem.marque} prix={ new Intl.NumberFormat('fr-CA').format(elem.prix)  }/>
                            </div>
                        )
                     })}
