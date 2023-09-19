@@ -6,6 +6,7 @@ import Tableau from './components/Tableau';
 import Calendrier from './components/Calendrier';
 import Convertisseur from './components/Convertisseur';
 import Crypto from './components/Crypto';
+import Fibonacci from './components/Fibonacci';
 import { Container } from 'react-bootstrap';
 
 
@@ -25,6 +26,7 @@ function App() {
               <Route path="/calendrier" element={<Calendrier />} />
               <Route path="/convertisseur" element={<Convertisseur />} />
               <Route path="/crypto" element={<Crypto />} />
+              <Route path="/fibonacci" element={<Fibonacci />} />
             </Routes>
           </Container>
 

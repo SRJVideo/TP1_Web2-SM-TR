@@ -9,6 +9,7 @@ function Navbar() {
                 <li><NavLink to="/calendrier">Calendrier</NavLink></li>
                 <li><NavLink to="/convertisseur">Convertisseur</NavLink></li>
                 <li><NavLink to="/crypto">Crypto</NavLink></li>
+                <li><NavLink to="/fibonacci">Fibonacci</NavLink></li>
             </ul>
         </nav>
     );
