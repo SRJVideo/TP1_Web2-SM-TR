@@ -40,8 +40,8 @@ class Fibonacci extends Component {
                     Enter n:
                     <input type="number" value={this.state.valeur_entree} onChange={this.handleValeur_entree} />
                 </label>
-                <button onClick={()=>this.calculFibonacci(Number(this.state.valeur_entree))}>Calcul</button><br />
-                Fibonacci() :{Number(this.state.valeur_finale)}
+                <button onClick={() => this.calculFibonacci(Number(this.state.valeur_entree))}>Calcul</button><br />
+                Fibonacci({this.state.valeur_entree}) :{Number(this.state.valeur_finale)}
             </div>
         );
     }
