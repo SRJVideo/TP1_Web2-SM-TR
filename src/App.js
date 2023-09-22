@@ -4,7 +4,7 @@ import Accueil from './components/Accueil';
 import MonCarousel from './components/MonCarousel';
 import Tableau from './components/Tableau';
 import Calendrier from './components/Calendrier';
-import Convertisseur from './components/Convertisseur';
+import Convertisseur from "./components/convertisseur/Convertisseur";
 import Crypto from './components/Crypto';
 import Fibonacci from "./components/Fibonacci/Fibonacci";
 import FibonacciWW from './components/FibonacciWebWorkers';
