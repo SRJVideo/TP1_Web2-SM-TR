@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {Button, Col, Form, InputGroup} from "react-bootstrap";
-
+//https://www.newline.co/fullstack-react/articles/introduction-to-web-workers-with-react/
 class FibonacciWebWorkers extends Component {
    state = {
         valeur_entree:0,
