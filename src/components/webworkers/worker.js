@@ -3,17 +3,21 @@ export default () =>{
     // eslint-disable-next-line no-restricted-globals
     self.onmessage = (message) => {
         const nbr = message.data;
-        let n1 = 0;
-        let n2 = 1;
-        let somme = 0;
 
-        for (let i = 2; i <= nbr; i++) {
-            somme = n1 + n2;
-            n1 = n2;
-            n2 = somme;
-        }
-
-        const result = nbr ? n2 : n1;
+        const result = fibonacciCalcul(nbr);
         postMessage(result);
     };
+
+    function fibonacciCalcul(nbr) {
+        let valeur;
+
+        if(nbr === 0 || nbr === 1  ) {
+            valeur = Number(nbr)
+        }
+        else {
+            valeur = fibonacciCalcul(nbr - 1) + fibonacciCalcul(nbr - 2)
+        }
+        return valeur
+    }
 };
+
