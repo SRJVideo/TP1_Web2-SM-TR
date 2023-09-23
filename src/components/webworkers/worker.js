@@ -4,8 +4,13 @@ export default () =>{
     self.onmessage = (message) => {
         const nbr = message.data;
 
+        const startTime = new Date().getTime()
         const result = fibonacciCalcul(nbr);
-        postMessage(result);
+        const endTime = new Date().getTime()
+
+        console.log("Temps début: "+startTime)
+        console.log("Temps fin: "+endTime)
+        postMessage([result, Math.abs(endTime-startTime)]);
     };
 
     function fibonacciCalcul(nbr) {
@@ -19,5 +24,7 @@ export default () =>{
         }
         return valeur
     }
+
+
 };
 
