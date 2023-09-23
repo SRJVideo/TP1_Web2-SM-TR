@@ -4,6 +4,7 @@ import WorkerBuilder from "./webworkers/WorkerBuilder";
 import FiboWorker from "./webworkers/worker";
 //https://www.newline.co/fullstack-react/articles/introduction-to-web-workers-with-react/
 //https://javascript.plainenglish.io/web-worker-in-react-9b2efafe309c
+//https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers
 
 const instance = new WorkerBuilder(FiboWorker);
 class FibonacciWebWorkers extends Component {

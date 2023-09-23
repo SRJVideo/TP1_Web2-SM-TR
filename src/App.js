@@ -1,4 +1,4 @@
-import Navbar from './components/Navbar';
+import Navbar from './components/sous-components/Navbar';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Accueil from './components/Accueil';
 import MonCarousel from './components/MonCarousel';
@@ -10,8 +10,8 @@ import Fibonacci from "./components/Fibonacci/Fibonacci";
 import FibonacciWW from './components/FibonacciWebWorkers';
 import { Container } from 'react-bootstrap';
 
-
-
+//Déploiement:
+/*https://tp1-web2-sm-tr.vercel.app/*/
 
 function App() {
   return (
@@ -20,7 +20,6 @@ function App() {
         <div className="App">
           <Navbar />
           <Container className='navBar'>
-
             <Routes>
               <Route exact path="/" element={<Accueil />} />
               <Route path="/carousel" element={<MonCarousel />} />
@@ -32,7 +31,6 @@ function App() {
               <Route path="/fibonacciww" element={<FibonacciWW />} />
             </Routes>
           </Container>
-
         </div>
       </BrowserRouter>
     </div>
