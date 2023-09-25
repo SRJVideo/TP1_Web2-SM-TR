@@ -2,6 +2,7 @@ import React from 'react';
 import {Table} from "react-bootstrap";
 import Junior from "./sous-components/TableauJunior"
 
+
 // site déployé : https://tp1-web2-sm-tr.vercel.app/
 // https://www.syncfusion.com/forums/166256/custom-number-separators-thousand-and-decimal
 class Tableau extends React.Component {

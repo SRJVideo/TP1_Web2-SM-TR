@@ -9,6 +9,8 @@ import Crypto from './components/Crypto';
 import Fibonacci from "./components/Fibonacci/Fibonacci";
 import FibonacciWW from './components/FibonacciWebWorkers';
 import { Container } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/js/bootstrap.js';
 
 //Déploiement:
 /*https://tp1-web2-sm-tr.vercel.app/*/
