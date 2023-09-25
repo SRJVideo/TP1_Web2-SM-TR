@@ -22,7 +22,7 @@ class Crypto extends React.Component {
                         <td>35309 $</td>
                         <td>29</td>
                         <td>1023961.00 $</td>
-                        <td><Button variant="primary">Primary</Button></td>
+                        <td><Button variant="primary">Modifier</Button></td>
                     </tr>
                     </tbody>
                 </Table>
