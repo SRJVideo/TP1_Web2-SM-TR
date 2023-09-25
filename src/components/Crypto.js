@@ -19,6 +19,25 @@ class Crypto extends React.Component {
         ],
         rowHandlerId:null
     }
+    handleCrypto(index) {
+        this.setState({
+            rowHandlerId : index
+        })
+    }
+
+    enregistrerCrypto() {
+
+        this.setState({
+            // eslint-disable-next-line array-callback-return
+            crypto :  this.state.cryptos.map((cryp,index) =>  {
+                 if (index === this.state.rowHandlerId){
+                    cryp.prix = document.getElementById("val-pr").value;
+                    cryp.quantite = document.getElementById("val-qu").value;
+                }
+            }),
+            rowHandlerId : null
+        })
+    }
 
 
     render() {
@@ -37,32 +56,22 @@ class Crypto extends React.Component {
                     </thead>
                     <tbody>
                     {
-
                         this.state.cryptos.map((cryp,index) => {
                             if(this.state.rowHandlerId === index){
                                 return(
-                                    <CryptoModifier id="cry-mod" prix={cryp.prix} quantite={cryp.quantite} onClick={() => this.enregistrerCrypto()}/>
+                                    <CryptoModifier nom={cryp.nom}  prix={cryp.prix} quantite={cryp.quantite} onClick={() => this.enregistrerCrypto()}/>
                                 )
                             }
                                 return(
-                                    <CryptoRow key={index} nom={cryp.nom} prix={cryp.prix} quantite={cryp.quantite} onClick={() => this.handleCrypto(index)}/>
+                                    <CryptoRow nom={cryp.nom} prix={cryp.prix} quantite={cryp.quantite} onClick={() => this.handleCrypto(index)}/>
                                 )
-
-
                         })
                     }
-
-
                     </tbody>
                 </Table>
             </div>
         );
     }
-
-
-
 }
-
-
 
 export default Crypto;
