@@ -4,13 +4,11 @@ function TableauJunior (props) {
     const prix = props.prix;
 
     return (
-        <div>
             <tr>
                 <td>{modele}</td>
                 <td>{marque}</td>
                 <td>{prix} $</td>
             </tr>
-        </div>
     );
 
 }

@@ -31,9 +31,7 @@ class Tableau extends React.Component {
                     <tbody>
                     {this.state.listElements.map((elem, index) => {
                        return(
-                           <div key={index}>
-                               <Junior modele={elem.modele} marque={elem.marque} prix={ new Intl.NumberFormat('fr-CA').format(elem.prix)  }/>
-                           </div>
+                           <Junior key={index}  modele={elem.modele} marque={elem.marque} prix={ new Intl.NumberFormat('fr-CA').format(elem.prix)  }/>
                        )
                     })}
                     </tbody>
