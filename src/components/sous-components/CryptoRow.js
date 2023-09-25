@@ -6,15 +6,18 @@ class CryptoRow extends Component {
         super(props);
 
         this.state={
+            id: undefined,
             nom: null,
-            prix: 0,
-            quantite: 0,
-            total: 0
+            prix: undefined,
+            quantite: undefined,
+            total: undefined
+
         }
     }
 
     componentDidMount() {
         this.setState(  {
+            key: this.props.key,
             nom: this.props.nom,
             prix: this.props.prix,
             quantite: this.props.quantite,
@@ -33,16 +36,13 @@ class CryptoRow extends Component {
 
     render() {
         return (
-            <div>
-                <tr>
-                    <td>{this.state.nom}</td>
-                    <td>{this.state.prix} $</td>
-                    <td>{this.state.quantite}</td>
-                    <td>{this.state.total} $</td>
-                    <td><Button variant="primary">Modifier</Button></td>
-                </tr>
-            </div>
-
+            <tr>
+                <td>{this.state.nom}</td>
+                <td>{new Intl.NumberFormat("fr-CA").format(this.state.prix)   } $</td>
+                <td>{this.state.quantite}</td>
+                <td>{new Intl.NumberFormat("fr-CA").format(this.state.total)} $</td>
+                <td><Button onClick={() => this.props.onClick()} variant="primary">Modifier</Button></td>
+            </tr>
         );
     }
 }

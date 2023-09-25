@@ -1,19 +1,18 @@
-import React, {Component} from 'react';
 import {Button} from "react-bootstrap";
 
-class CryptoModifier extends Component {
-    render() {
-        return (
-            <div>
-                <tr>
-                    <td><h3>Modifier</h3></td>
-                    <td><input type="number"/></td>
-                    <td><input type="number"/></td>
-                    <td><Button variant="outline-primary">Enregistrer</Button></td>
-                </tr>
-            </div>
-        );
-    }
+function CryptoModifier(props){
+
+    let modPrix = props.prix;
+    let modQuantite = props.quantite;
+
+    return (
+        <tr>
+            <td><h3>Modifier</h3></td>
+            <td><input id="val-pr" type="number" defaultValue={modPrix}/></td>
+            <td><input id="val-qu" type="number" defaultValue={modQuantite}/></td>
+            <td><Button onClick={() => props.onClick()} variant="outline-primary">Enregistrer</Button></td>
+        </tr>
+    );
 }
 
 export default CryptoModifier;
