@@ -1,29 +1,29 @@
 import React from 'react';
-import {Button, Table} from "react-bootstrap";
+import Table from 'react-bootstrap/Table'
+import CryptoRow from "./sous-components/CryptoRow";
+import CryptoModifier from "./sous-components/CryptoModifier";
 
 class Crypto extends React.Component {
+
+
+
     render() {
         return (
             <div>
                 <h1>Crypto</h1>
-                
-                <Table>
+
+                <Table striped bordered hover>
                     <thead>
-                    <tr>
-                        <th>Nom</th>
-                        <th>Prix</th>
-                        <th>Quantité</th>
-                        <th>Total</th>
-                    </tr>
+                        <tr>
+                            <th>Nom</th>
+                            <th>Prix</th>
+                            <th>Quantité</th>
+                            <th>Total</th>
+                        </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <td>Bitcoin</td>
-                        <td>35309 $</td>
-                        <td>29</td>
-                        <td>1023961.00 $</td>
-                        <td><Button variant="primary">Modifier</Button></td>
-                    </tr>
+                        <CryptoRow nom={"Bitcoin"} prix={35309} quantite={29}/>
+                        <CryptoModifier/>
                     </tbody>
                 </Table>
             </div>
