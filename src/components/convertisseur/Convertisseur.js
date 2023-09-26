@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Mesure from './Mesure';
+
 
 class Convertisseur extends Component {
    state = {
@@ -8,26 +10,29 @@ class Convertisseur extends Component {
 
     handleDistance = (e) => {
         this.setState({
-            distance: e.target.value
+            distance: Number(e.target.value)
         })
     }
 
-    handleEchelle = (e) => {
+    handleEchelle = (ec) => {
         this.setState({
-            echelle: e.target.value
+            echelle: ec
         })
     }
 
+    onDistanceChange =(e,ec)=> {
+        this.handleEchelle(ec)
+        this.handleDistance(e)
+
+    }
 
 
     render() {
         return (
             <div>
-                <h1>Convertisseur d'une unité de mesure</h1>
-                <fieldset>
-                    <legend>Saisissez la mesure en Centimètres</legend>
-                    <input type='text' onChange={this.handleValeur_centimetreChange} value={this.state.valeur_centimetre} />
-                </fieldset>
+                <Mesure echelle="cm" coeff={100} vinput={this.state.distance} vechelle={this.state.echelle} onChange={this.onDistanceChange}/>
+                <Mesure echelle="m" coeff={1} vinput={this.state.distance} vechelle={this.state.echelle}  onChange={this.onDistanceChange}/>
+                <Mesure echelle="km" coeff={0.001} vinput={this.state.distance} vechelle={this.state.echelle} onChange={this.onDistanceChange}/>
             </div>
         );
     }
