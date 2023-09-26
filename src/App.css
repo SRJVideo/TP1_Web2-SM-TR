@@ -42,6 +42,6 @@ tr > .dubleu{
   color: lightgreen;
 }
 
-h1 {
+h1, fieldset {
  text-align: left;
 }
