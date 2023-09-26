@@ -1,4 +1,4 @@
-/*function calculFibonacci(num) {
+function calculFibonacci(num) {
     if (num === 0) {
         return 0
     }
@@ -13,4 +13,4 @@
 
 export  {
     calculFibonacci
-}*/
+}
