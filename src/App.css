@@ -36,3 +36,8 @@
     transform: rotate(360deg);
   }
 }
+
+tr > .dubleu{
+  background-color: royalblue;
+  color: lightgreen;
+}

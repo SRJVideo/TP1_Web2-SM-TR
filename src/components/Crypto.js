@@ -48,10 +48,10 @@ class Crypto extends React.Component {
                 <Table striped bordered hover>
                     <thead>
                         <tr>
-                            <th>Nom</th>
-                            <th>Prix</th>
-                            <th>Quantité</th>
-                            <th>Total</th>
+                            <th className="dubleu">Nom</th>
+                            <th className="dubleu">Prix</th>
+                            <th className="dubleu">Quantité</th>
+                            <th className="dubleu">Total</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -59,12 +59,16 @@ class Crypto extends React.Component {
                         this.state.cryptos.map((cryp,index) => {
                             if(this.state.rowHandlerId === index){
                                 return(
-                                    <CryptoModifier nom={cryp.nom}  prix={cryp.prix} quantite={cryp.quantite} onClick={() => this.enregistrerCrypto()}/>
+                                    <>
+                                        <CryptoRow nom={cryp.nom} prix={cryp.prix} quantite={cryp.quantite} onClick={() => this.handleCrypto(index)}/>
+                                        <CryptoModifier nom={cryp.nom}  prix={cryp.prix} quantite={cryp.quantite} onClick={() => this.enregistrerCrypto()}/>
+                                    </>
                                 )
                             }
-                                return(
+                            return(
                                     <CryptoRow nom={cryp.nom} prix={cryp.prix} quantite={cryp.quantite} onClick={() => this.handleCrypto(index)}/>
-                                )
+                            )
+
                         })
                     }
                     </tbody>
