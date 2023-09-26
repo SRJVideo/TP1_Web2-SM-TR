@@ -23,7 +23,7 @@ class Convertisseur extends Component {
     render() {
         return (
             <div>
-                <h1 style={{ textAlign: "left" }}>Convertisseur d'une unité de mesure</h1>
+                <h1>Convertisseur d'une unité de mesure</h1>
                 <fieldset>
                     <legend>Saisissez la mesure en Centimètres</legend>
                     <input type='text' onChange={this.handleValeur_centimetreChange} value={this.state.valeur_centimetre} />
