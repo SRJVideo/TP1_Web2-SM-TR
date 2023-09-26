@@ -13,7 +13,7 @@ function DemoApp () {
                     weekends={true}
                     events={[
                       { title: 'Début TP1', date: '2023-09-12' },
-                      { title: 'Remise tp1', date: '2023-09-26' }
+                      { title: 'Remise TP1', date: '2023-09-26' }
                     ]}
                 />
             </div>
