@@ -30,6 +30,7 @@ class Convertisseur extends Component {
     render() {
         return (
             <div>
+                <h1>Convertisseur d'unité de mesure</h1>
                 <Mesure echelle="cm" coeff={100} vinput={this.state.distance} vechelle={this.state.echelle} onChange={this.onDistanceChange}/>
                 <Mesure echelle="m" coeff={1} vinput={this.state.distance} vechelle={this.state.echelle}  onChange={this.onDistanceChange}/>
                 <Mesure echelle="km" coeff={0.001} vinput={this.state.distance} vechelle={this.state.echelle} onChange={this.onDistanceChange}/>
