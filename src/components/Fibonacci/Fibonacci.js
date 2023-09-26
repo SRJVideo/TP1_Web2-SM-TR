@@ -19,12 +19,9 @@ class Fibonacci extends Component {
 
     appelCalculFibonacci = () => {
         
-        let result = calculFibonacci(Number(this.state.valeur_entree));
             this.setState({
-            valeur_finale:result 
+            valeur_finale: calculFibonacci(Number(this.state.valeur_entree)) 
         })
-        
-       
     }
 
 
