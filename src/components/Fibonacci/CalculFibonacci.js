@@ -1,16 +1,13 @@
-function calculFibonacci(num) {
+export default function calculFibonacci(num) {
+   let val ;
     if (num === 0) {
-        return 0
+        val = 0
     }
     else if (num === 1) {
-        return 1
+        val = 1
     }
     else {
-        return calculFibonacci(num - 1) + this.calculFibonacci(num - 2)
+        val = calculFibonacci(num- 1) + calculFibonacci(num - 2)
     }
-}
-
-
-export  {
-    calculFibonacci
+    return val
 }

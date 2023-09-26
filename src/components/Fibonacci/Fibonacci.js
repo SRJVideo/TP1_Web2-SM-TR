@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import  {calculFibonacci}  from './CalculFibonacci.js';
+import calculFibonacci  from './CalculFibonacci.js';
 
 
 class Fibonacci extends Component {
@@ -14,36 +14,17 @@ class Fibonacci extends Component {
         })
     }
 
-   
 
-     calculFibonacci = (num) => {
-        if (num === 0) {
-            return 0
-        }
-        else if (num === 1) {
-            return 1
-        }
-        else {
-            return this.calculFibonacci(num - 1) + this.calculFibonacci(num - 2)
-        }
-    }
-
-    handleValeur_finale = (e) => {
-        this.setState({
-            valeur_finale: Number(e.target.value),
-        })
-        this.valeur_finale = this.calculFibonacci(this.state.valeur_entree)
-
-
-    }
-
-    //faire une fonction qui appelle calculFibonacci puis met a jour le state 
 
 
     appelCalculFibonacci = () => {
-        this.setState({
-            valeur_finale: this.calculFibonacci(this.state.valeur_entree)
+        
+        let result = calculFibonacci(Number(this.state.valeur_entree));
+            this.setState({
+            valeur_finale:result 
         })
+        
+       
     }
 
 
@@ -58,7 +39,7 @@ class Fibonacci extends Component {
                     Enter n:
                     <input type="number" onChange={this.handleValeur_entree} />
                 </label>
-                <button onClick={() => this.handleValeur_finale}>Calcul</button><br />
+                <button onClick={this.appelCalculFibonacci}>Calcul</button><br />
                 Fibonacci({this.state.valeur_entree}) ={this.state.valeur_finale}
             </div>
         );
